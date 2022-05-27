@@ -99,7 +99,7 @@ export default function Gquery() {
                     alignment === "query_type-1" ?
                         <h2>Query: {query}</h2>
                         :
-                        <h2>At given <span style={{ color: "blue" }}>{valueH}</span> we can get following <span style={{ color: "green" }}>{valueP}</span></h2>
+                        <h2>At given: <span style={{ color: "blue" }}>{valueH}</span> we can get following: <span style={{ color: "green" }}>{valueP}</span></h2>
                 }
                 <br />
                 {
