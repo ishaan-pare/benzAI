@@ -34,6 +34,7 @@ import axios from "axios";
 //imports within projects goes here
 import Item from "../Item";
 import QueryHelper from "../Helper/QueryHelper";
+import Progress from "../Progress/Progress";
 
 //Main JSX component Gquery
 export default function Gquery() {
@@ -53,18 +54,20 @@ export default function Gquery() {
     //predictor value which user want to predict
     const [valueP, setValueP] = useState("");
 
-
+    const [load, setLoad] = useState(0)
 
     // functions for handling events of form for query and predictor logic
     const onChangeValue = (e) => {
         setQuery(e.target.value);
     }
     const onSubmit = async (e) => {
-        await axios.get("https://carfeaturesanalysis.herokuapp.com/predict?q=" + query)
+        setLoad(1);
+        await axios.get("https://carfeaturesanalysis.herokuapp.com/query?q=" + query)
             .then((res) => {
                 setResult(res.data["result"]);
                 setHeaders(res.data["headers"]);
-            });
+            })
+            .then(()=>setLoad(0));
     }
     const handleChange = (event, newAlignment) => {
         setAlignment(newAlignment);
@@ -76,11 +79,13 @@ export default function Gquery() {
         setValueP(e.target.value);
     }
     const onSubmitP = async () => {
+        setLoad(1);
         await axios.get("https://carfeaturesanalysis.herokuapp.com/predict?q=" + valueH + "," + query + " " + valueP)
             .then((res) => {
                 setResult(res.data["result"]);
                 setHeaders(res.data["headers"]);
-            });
+            })
+            .then(()=>setLoad(0));
     }
 
 
@@ -229,7 +234,9 @@ export default function Gquery() {
                     <Grid item sm={9}>
                         <h1>Query Processing</h1>
                         <br />
-                        <Result />
+                        {
+                            load===1?<Progress/>:<Result/>
+                        }
                         <br />
                     </Grid>
                 </Grid>
