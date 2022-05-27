@@ -11,6 +11,14 @@ Demonstration of how the Automotive Industry could harness data to take informed
 * Type npm install and hit enter, all the dependencies will install in your laptop
 * Now you can start frontend by typing npm start
 
+<p align="center">
+  <img
+       width="300"
+       height="300"
+       src=""
+  >
+</p>
+
 #### Or else You can go through given [link]( https://analysiscar.herokuapp.com/)
 
 ## Introduction
