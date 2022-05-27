@@ -16,7 +16,7 @@ function HeatMap() {
                     })
             
 
-    }, [heatmapData]);
+    }, []);
 
     const tooltipTemplate = (args) => {
         args.content = [args.yLabel + ' | ' + args.xLabel + ' : ' + args.value + ' %'];

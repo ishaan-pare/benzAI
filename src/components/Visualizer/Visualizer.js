@@ -7,6 +7,7 @@ import axios from "axios";
 import { Bar, Line, Scatter } from "react-chartjs-2";
 import Chart from 'chart.js/auto';
 
+
 export default function Visualizer() {
     const [value1, setValue1] = React.useState('');
     const [value2, setValue2] = React.useState('');
@@ -34,7 +35,7 @@ export default function Visualizer() {
 
     const LItem = () => {
         return (
-            <Item>
+            <Item >
                 {
                     graph == "line" ? <Line
                         data={{
@@ -116,9 +117,11 @@ export default function Visualizer() {
                 </FormControl>
                 <Divider />
                 <br />
+              
                 <Grid container spacing={2}>
 
                     <Grid item sm={6}>
+
                         <Item sx={{ padding: "20px" }}>
                             <h2 style={{ "marginBottom": "20px" }}>Dependents</h2>
 
@@ -170,21 +173,18 @@ export default function Visualizer() {
         <Box spacing={2}>
             <Grid container spacing={2}>
                 <Grid item xs={4}>
-                    <Item>
                         <h1>Features</h1>
-                    </Item>
-                    <br/>
 
                     <RItem />
                 </Grid>
                 <Grid item xs={8}>
-                    <Item>
                         <h1>Visualizer</h1>
-                    </Item>
                     <br />
                     <LItem />
+                    <br />
                 </Grid>
             </Grid>
+
         </Box >
     );
 }

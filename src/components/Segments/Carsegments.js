@@ -12,7 +12,7 @@ import {
 import Item from "../Item";
 import axios from "axios";
 import Chart from 'chart.js/auto';
-import { Pie} from "react-chartjs-2";
+import { Pie } from "react-chartjs-2";
 
 
 
@@ -42,9 +42,10 @@ export default function Carsegments() {
 
             });
 
-    })
+    }, [])
         ;
     return (
+        <>
         <Container>
             <Item>
                 <h2>Customer segments based on car modularity</h2>
@@ -100,19 +101,21 @@ export default function Carsegments() {
                         </Grid>
                     </Grid>
                 </Item> :
-                <Item sx={{display: "flex", justifyContent: "center"}}>
-                    <Item sx={{width: "40%", height: "40%"}}>
+                <Item sx={{ display: "flex", justifyContent: "center" }}>
+                    <Item sx={{ width: "40%", height: "40%" }}>
                         <Pie
                             data={{
                                 labels: data1,
-                                datasets: [{data: data, backgroundColor: ["yellow","green", "blue", "red"]}]
-                            
+                                datasets: [{ data: data, backgroundColor: ["yellow", "green", "blue", "red"] }]
+
                             }}
-                            options={{animation: 2000}}
+                            options={{ animation: 2000 }}
                         />
                     </Item>
                 </Item>
             }
+           
         </Container>
+         </>
     );
 }

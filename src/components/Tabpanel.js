@@ -7,7 +7,6 @@ import Box from '@mui/material/Box';
 import Relations from './Relations/Relations';
 import Gquery from './Gquery/Gquery';
 import Visualizer from './Visualizer/Visualizer';
-import Predictor from './Predictor/Predictor';
 import Carsegments from './Segments/Carsegments';
 
 
@@ -55,21 +54,20 @@ export default function BasicTabs() {
     <Box sx={{ width: '100%' }}>
       <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
         <Tabs value={value} onChange={handleChange} aria-label="basic tabs example">
-          <Tab label="Features Analysis" {...a11yProps(0)} />
-          <Tab label="Query Processing" {...a11yProps(1)} />
+          <Tab label="Query Processing" {...a11yProps(0)} />
+          <Tab label="Features Analysis" {...a11yProps(1)} />
           <Tab label="Visualizer" {...a11yProps(2)} />
           <Tab label="Customer Segments" {...a11yProps(3)} />
-
         </Tabs>
       </Box>
       <TabPanel value={value} index={0}>
-        <Relations />
+        <Gquery />
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <Gquery/>
+        <Relations />
       </TabPanel>
       <TabPanel value={value} index={2}>
-        <Visualizer/>
+        <Visualizer />
       </TabPanel>
       <TabPanel value={value} index={3}>
         <Carsegments />

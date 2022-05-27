@@ -10,6 +10,7 @@ import Item from "../Item";
 import HeatMap from "./sub/Heatmap";
 import Mattr from "./sub/MAttr";
 import Interpret from "./sub/Interpret";
+import FtHelper from "../Helper/FtHelper";
 
 export default function Relations() {
   return (
@@ -20,15 +21,18 @@ export default function Relations() {
         </Grid>
         <Grid item xs={9}>
           <Stack spacing={2}>
-            <Item><h1>Relational Analysis</h1></Item>
+            <h1>Relational Analysis</h1>
             <Item sx={{ padding: "20px" }}>
               <h2 style={{ "marginBottom": "20px" }}>Relationship between functional features</h2>
               <Divider />
               <HeatMap />
             </Item>
             <Item sx={{ padding: "20px" , fontSize: "15px"}}>
-              <h2>Interpretation of the results</h2>
-              <Interpret />
+              <h2>How to interpret the results</h2>
+              <br/>
+              <Divider/>
+              <br/>
+              <FtHelper/>
             </Item>
           </Stack>
 

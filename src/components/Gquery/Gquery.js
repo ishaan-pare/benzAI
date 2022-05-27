@@ -24,9 +24,9 @@ import {
 
 } from "@mui/material";
 
-
 import Item from "../Item";
 import axios from "axios";
+import QueryHelper from "../Helper/QueryHelper";
 
 
 
@@ -74,7 +74,26 @@ export default function Gquery() {
     const Result = () => {
         return (
             <Item>
-                <h2>Results</h2>
+                {
+                    result.length !== 0 ?
+                        <>
+                            {
+                                alignment === "query" ?
+                                    <h2>Query: {query}</h2>
+                                    :
+                                    <h2>At given {valueH} we can get folowing {valueP}</h2>
+                            }
+                            <br />
+                        </> :
+                        <>
+                            <br />
+                            <Divider />
+                            <br />
+                            <h2>Instructions</h2>
+                            <QueryHelper />
+                        </>
+
+                }
                 <TableContainer component={Paper}>
                     <Table sx={{ minWidth: 650 }} aria-label="simple table">
                         <TableHead>
@@ -116,11 +135,12 @@ export default function Gquery() {
                                 onChange={handleChange}
                             >
                                 <ToggleButton value="query_type-1">Queries</ToggleButton>
-                                <ToggleButton value="query_type-2">Predictions</ToggleButton>
+                                <ToggleButton value="query_type-2" onClick={() => setQuery("")}>Predictions</ToggleButton>
                             </ToggleButtonGroup>
                         </Item>
                         {alignment === "query_type-1" ? <Item style={{ "padding": "35px" }}>
                             <h2 style={{ "marginBottom": "20px" }}>Enter your query here</h2>
+                            <h4>example = "popular features"</h4>
                             <br />
                             <TextField id="outlined-basic" label="Query" variant="outlined" value={query} onChange={onChangeValue} />
                             <br />
@@ -129,6 +149,7 @@ export default function Gquery() {
                             <Stack justifyContent="center" direction="row" spacing={1}>
                                 <Button onClick={onSubmit} variant="contained">Ask</Button>
                                 <Button onClick={() => setQuery("")} variant="contained">Clear</Button>
+                                <Button onClick={() => { setResult([]); setHeaders([]) }} variant="contained">Help</Button>
                             </Stack>
                         </Item> :
                             <Item>
@@ -142,9 +163,9 @@ export default function Gquery() {
                                     onChange={handleRadioChangeH}
                                 >
                                     <FormControlLabel value={"Price"} control={<Radio />} label={"Price"} />
-                                    <FormControlLabel value={"Sales"} control={<Radio />} label={"Sales"} />
                                     <FormControlLabel value={"HardFeatures"} control={<Radio />} label={"HardFeatures"} />
                                     <FormControlLabel value={"SoftFeatures"} control={<Radio />} label={"SoftFeatures"} />
+
 
                                 </RadioGroup>
                                 <br />
@@ -168,20 +189,25 @@ export default function Gquery() {
                                 <TextField id="outlined-basic" label={valueH} variant="outlined" value={query} onChange={onChangeValue} />
                                 <br />
                                 <br />
+                                <Stack justifyContent="center" direction="row" spacing={1}>
 
-                                <Button onClick={onSubmitP} variant="contained">Predict</Button>
+
+                                    <Button onClick={onSubmitP} variant="contained">Predict</Button>
+                                    <Button onClick={() => { setResult([]); setHeaders([]) }} variant="contained">Help</Button>
+
+                                </Stack>
+
                             </Item>
-
                         }
-                        <br />
+
 
                     </Grid>
+
                     <Grid item sm={9}>
-                        <Item>
-                            <h1>Query Processing</h1>
-                        </Item>
+                        <h1>Query Processing</h1>
                         <br />
                         <Result />
+                        <br />
                     </Grid>
                 </Grid>
             </Stack>
