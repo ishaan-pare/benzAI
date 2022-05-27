@@ -33,8 +33,23 @@ export default function ControlledAccordions() {
           <Typography>How to use query processor ?</Typography>
         </AccordionSummary>
         <AccordionDetails>
-          <Typography sx={{ color: 'text.secondary' }}>
-            For using query processor you need three arguments and third one is optional <b> For example to get the popular features we need to write query for example as popular features in lower case </b>
+          <Typography sx={{ color: 'text.secondary', textAlign: "left", marginLeft: "20px"}}>
+            Query processor includes 3 parts 
+            <ul>
+              <li>
+                <b>Keyword</b>: max, popular
+              </li>
+              <li>
+                <b>Noun/feature(s)</b>: weight, fuelcapacity, width, enginesize, length...
+              </li>
+              <li>
+                <b>Specifier</b>: between followed by range and keyword
+              </li>
+            </ul><br/>
+            Syntax: keyword+Noun+Specifier<br/><br/>
+            <b>
+            Example1: popular features<br/>
+            Example2: popular features between 1 20 price</b>
           </Typography>
         </AccordionDetails>
       </Accordion>
