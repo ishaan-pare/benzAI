@@ -92,6 +92,7 @@ export default function Visualizer() {
 
                             }} />
                 }
+                {value1} vs {value2}
 
             </Item>
         );
