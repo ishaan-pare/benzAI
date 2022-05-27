@@ -1,4 +1,10 @@
-import React, { useEffect, useState } from "react";
+/*
+    Gquery 
+    used for displaying query answers computed by backend at https://carfeaturesanalysis.herokuapp.com
+*/
+
+//core imports goes here 
+import React, { useState } from "react";
 import {
     Box,
     Button,
@@ -23,30 +29,38 @@ import {
     FormControlLabel
 
 } from "@mui/material";
-
-import Item from "../Item";
 import axios from "axios";
+
+//imports within projects goes here
+import Item from "../Item";
 import QueryHelper from "../Helper/QueryHelper";
 
-
-
-
+//Main JSX component Gquery
 export default function Gquery() {
 
+    //state management using react hooks
+
+    //query for text user enter in dialog
     const [query, setQuery] = useState("");
+    //headers we get from backend
     const [headers, setHeaders] = useState([]);
+    //results we get from backend
     const [result, setResult] = useState([]);
+    //alignment logic of predictor and query processor
     const [alignment, setAlignment] = useState("query_type-1")
-    const [value1, setValue1] = useState("");
+    //predictor value which user have
     const [valueH, setValueH] = useState("");
+    //predictor value which user want to predict
     const [valueP, setValueP] = useState("");
 
 
+
+    // functions for handling events of form for query and predictor logic
     const onChangeValue = (e) => {
         setQuery(e.target.value);
     }
     const onSubmit = async (e) => {
-        await axios.get("http://localhost:5000/query?q=" + query)
+        await axios.get("https://carfeaturesanalysis.herokuapp.com/predict?q=" + query)
             .then((res) => {
                 setResult(res.data["result"]);
                 setHeaders(res.data["headers"]);
@@ -70,10 +84,12 @@ export default function Gquery() {
     }
 
 
-
+    //Result component for displaying component
     const Result = () => {
         return (
             <Item>
+                {/* headers of result components */}
+
                 {
                     alignment === "query_type-1" ?
                         <h2>Query: {query}</h2>
@@ -83,9 +99,7 @@ export default function Gquery() {
                 <br />
                 {
                     result.length !== 0 ?
-                        <>
-
-                        </> :
+                        <></> :
                         <>
                             <br />
                             <Divider />
@@ -95,6 +109,9 @@ export default function Gquery() {
                         </>
 
                 }
+
+                {/* Displayed table of result */}
+
                 <TableContainer component={Paper}>
                     <Table sx={{ minWidth: 650 }} aria-label="simple table">
                         <TableHead>
@@ -123,12 +140,17 @@ export default function Gquery() {
             </Item>
         );
     }
+    //end of Result component
+
+    //returning all the components of Gquery 
     return (
         <Box sx={{ flexGrow: 1 }}>
+            {/* Bucket for  taking input from user*/}
             <Stack spacing={2}>
                 <Grid container spacing={2}>
                     <Grid item sm={3}>
                         <Item>
+                            {/* Toggle button for changing alignment */}
                             <ToggleButtonGroup
                                 color="primary"
                                 value={alignment}
@@ -139,6 +161,8 @@ export default function Gquery() {
                                 <ToggleButton value="query_type-2" onClick={() => setQuery("")}>Predictions</ToggleButton>
                             </ToggleButtonGroup>
                         </Item>
+
+                        {/* Forms fliping using aligment set by toggle button*/}
                         {alignment === "query_type-1" ? <Item style={{ "padding": "35px" }}>
                             <h2 style={{ "marginBottom": "20px" }}>Enter your query here</h2>
                             <h4>example = "popular features"</h4>
@@ -200,10 +224,8 @@ export default function Gquery() {
 
                             </Item>
                         }
-
-
+                    {/* adding result component in right position */}
                     </Grid>
-
                     <Grid item sm={9}>
                         <h1>Query Processing</h1>
                         <br />
@@ -212,6 +234,7 @@ export default function Gquery() {
                     </Grid>
                 </Grid>
             </Stack>
+            {/* End of bucket */}
         </Box>
     );
 }
