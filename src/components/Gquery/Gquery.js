@@ -79,6 +79,13 @@ export default function Gquery() {
         setValueP(e.target.value);
     }
     const onSubmitP = async () => {
+        if (valueH == "HardFeatures" && query.split(",").length !==5) {
+            return;
+        }
+        if (valueH == "SoftFeatures" && query.split(",").length !==4) {
+            return;
+        }
+
         setLoad(1);
         await axios.get("https://carfeaturesanalysis.herokuapp.com/predict?q=" + valueH + "," + query + " " + valueP)
             .then((res) => {
@@ -87,6 +94,7 @@ export default function Gquery() {
             })
             .then(()=>setLoad(0));
     }
+
 
 
     //Result component for displaying component
