@@ -13,9 +13,9 @@ Demonstration of how the Automotive Industry could harness data to take informed
 
 <p align="center">
   <img
-       width="300"
-       height="300"
-       src=""
+       width="max_content"
+       height="max_content"
+       src="readmeassets/fullpageview.png"
   >
 </p>
 
