@@ -23,7 +23,7 @@ export default function ButtonAppBar() {
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
             Data Analysis - Car dataset
           </Typography>
-          <Button color="inherit">Github</Button>
+          <Button color="inherit" href='https://github.com/ishaan-pare/car_data_analysis_frontend.git'>Github</Button>
         </Toolbar>
       </AppBar>
     </Box>
