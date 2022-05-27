@@ -23,7 +23,7 @@ export default function Mattr() {
     const [attr, setAttr] = useState(["Sales","Price", "Width"]);
 
     useEffect(()=>{
-        axios.get("http://localhost:5000/m_attr")
+        axios.get("https://carfeaturesanalysis.herokuapp.com/m_attr")
                     .then((res)=>{
                         setAttr(res.data)
 
