@@ -7,7 +7,7 @@
        height="max_content"
        src="readmeassets/entire.gif"
   ><br/><br/>
-  <b><u><i>Demonstration of how the Automotive Industry could harness data to take informed decisions.<i><u><b><br/><br/>
+  <b><u><i>Demonstration of how the Automotive Industry could harness data to take informed decisions.</i></u></b><br/><br/>
 </p>
 
 
