@@ -22,7 +22,7 @@ This is just a frontend of the entire application, and you can find the backend 
 Before installation let see what you need 
 * Laptop or PC (this application is non responsive in mobiles)
 * nodejs version>=16
-* 
+
 ## Installation
 
 * Open terminal or command prompt and do following step by step
