@@ -82,34 +82,61 @@ This is the very first screen you will see after launching the application. This
       1. powerperfactor, horsepower, yearresalevalue, fuelefficiency/mileage
 
 
-### After clicking on Features Analysis
+### After clicking on Features Analysis tab
   
 <p align="center">
   <img
        width="max_content"
        height="max_content"
-       src="readmeassets/Screenshot from 2022-05-27 23-55-18.png"
+       src="readmeassets/heatmap.png"
   >
-  This is the very first screen you will see after launching the application. This is Query Processing tab which resolve your query and also predict some of the parameters like features, price, sales.
 </p>
+With help of features analysis tab one can easily identify the most related features of cars and can make certain decision with the help of this information.
+Features analysis tab is partitioned in two parts
+  
+1) Most Dependent features <br/>
+  
+    In this most dependent features of cars are noted in decending order which help user to 
+   * Prioritised the features based on this dependencies
+   * Allocate work according to the skillset their employee have and the team they can form with the help of this dependecies
+  
+2) Relational analysis<br/>
+  
+    This type of queries only want three things from user
+  
+   * Shows the heatmap which again help user to identifies the relationship among dependencies and take necessary actions with it.
 
-* Once the application is lauched you will see screen given below.
+
+### After clicking on Visualizer tab
+  
 <p align="center">
   <img
        width="max_content"
        height="max_content"
-       src="readmeassets/Screenshot from 2022-05-27 23-55-18.png"
+       src="readmeassets/visuallizer.png"
   >
-  This is the very first screen you will see after launching the application. This is Query Processing tab which resolve your query and also predict some of the parameters like features, price, sales.
 </p>
+Visualizer let you draw different graphs on car dataset depending upon the dependent and independent variable user input
 
-* Once the application is lauched you will see screen given below.
+Three graph supported by visualizer are
+1)  Scatter graph
+2)  Line graph
+3)  Bar graph
+
+### After clicking on Customer segments
+  
 <p align="center">
   <img
        width="max_content"
        height="max_content"
-       src="readmeassets/Screenshot from 2022-05-27 23-55-18.png"
+       src="readmeassets/heatmap.png"
   >
-  This is the very first screen you will see after launching the application. This is Query Processing tab which resolve your query and also predict some of the parameters like features, price, sales.
 </p>
+Customer segmets let you visualize different segements of customer depending upon the price and sales of the car
 
+By analysing we can see customers are segmented in 4 different fields
+  
+1)  Small family
+2)  Family 
+3)  Luxirious
+4)  Vintage
