@@ -1,4 +1,13 @@
-# Data analytics in car dataset (MS Engage 2022 Submission)
+# 📊 Data analytics in car dataset 
+## (MS Engage 2022 Final submission).
+
+<p align="center">
+  <img
+       width="max_content"
+       height="max_content"
+       src="readmeassets/fullpageview.png"
+  >
+</p>
 
 Demonstration of how the Automotive Industry could harness data to take informed decisions.
 
@@ -11,13 +20,7 @@ Demonstration of how the Automotive Industry could harness data to take informed
 * Type npm install and hit enter, all the dependencies will install in your laptop
 * Now you can start frontend by typing npm start
 
-<p align="center">
-  <img
-       width="300"
-       height="300"
-       src=""
-  >
-</p>
+
 
 #### Or else You can go through given [link]( https://analysiscar.herokuapp.com/)
 
