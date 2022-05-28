@@ -17,6 +17,15 @@
   This application demonstrate how the automotive industry could harness the data to take informed decision. Any techinal head can use this type of application so that they can take necessary actions in their organisation. This application let you guide to dive into the data and help you identifying the trends and relations between the data, which help you to form queries for example what are some popular features set which customers choose the most, by entering this query in query processor you will get desire output which again based on the dataset that we are using. This application only meant for car dataset that was provided by kaggle and display query results and predictions only based on the model that were created using this dataset.<b> </p>
 This is just a frontend of the entire application, and you can find the backend of the application in </b> https://github.com/ishaan-pare/car_data_analysis_backend.git. 
 
+## Technologies used
+
+This application is frontend for car data analysis project and technologies used in this frontend are as follows
+* React
+* react-chartjs-2
+* chart.js
+* @syncfusion/ej2-react-heatmap
+* @mui/material
+
 ## System requirements
 
 Before installation let see what you need 
