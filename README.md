@@ -1,13 +1,13 @@
-# 📊 Data analytics in car dataset 
-## (MS Engage 2022 Final submission).
+# 📊 Data analytics in car dataset
+(MS Engage 2022 Final submission).
 
 <p align="center">
   <img
        width="max_content"
        height="max_content"
-       src="readmeassets/fullpageview.png"
-  >
-  Demonstration of how the Automotive Industry could harness data to take informed decisions.
+       src="readmeassets/entire.gif"
+  ><br/><br/>
+  <b><u><i>Demonstration of how the Automotive Industry could harness data to take informed decisions.<i><u><b><br/><br/>
 </p>
 
 
