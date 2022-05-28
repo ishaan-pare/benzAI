@@ -147,5 +147,5 @@ By analysing we can see customers are segmented in 4 different fields
   
 1)  Small family
 2)  Family 
-3)  Luxirious
+3)  Luxurious
 4)  Vintage
