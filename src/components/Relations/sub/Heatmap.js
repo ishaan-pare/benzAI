@@ -24,7 +24,7 @@ function HeatMap() {
 
     React.useEffect(() => {
         setLoad(1);
-        axios.get("https://carfeaturesanalysis.herokuapp.com/corr_coeffs")
+        axios.get("/corr_coeffs")
             .then((res) => {
                 setHeatMapData(res.data["coeffs"]);
             })

@@ -26,7 +26,7 @@ export default function Visualizer() {
 
 
     useEffect(() => {
-        axios.get("https://carfeaturesanalysis.herokuapp.com/get_visuals_data")
+        axios.get("/get_visuals_data")
             .then((res) => {
                 setData(res.data);
             });

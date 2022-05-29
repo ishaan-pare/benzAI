@@ -35,7 +35,7 @@ export default function Carsegments() {
     };
 
     useEffect(() => {
-        axios.get("https://carfeaturesanalysis.herokuapp.com/carsegments")
+        axios.get("/carsegments")
             .then((res) => {
                 setData(res.data["results"]);
                 setData1(res.data["headers"]);
