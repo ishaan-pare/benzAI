@@ -62,7 +62,7 @@ export default function Gquery() {
     }
     const onSubmit = async (e) => {
         setLoad(1);
-        await axios.get("/query?q=" + query)
+        await axios.get("https://carfeaturesanalysis.herokuapp.com/query?q=" + query)
             .then((res) => {
                 setResult(res.data["result"]);
                 setHeaders(res.data["headers"]);
