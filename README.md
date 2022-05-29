@@ -36,10 +36,10 @@ Before installation let see what you need
 
 * Open terminal or command prompt and do following step by step
 * Clone the repository by using following command
-* git clone url/to/this/repo
+* <b>git clone</b> url/to/this/repo
 * cd to the cloned repository named car_data_analysis_frontend or car_data_analysis_frontend_main
-* Type npm install and hit enter, all the dependencies will install in your laptop
-* Now you can start frontend by typing npm start
+* Type <b>npm install</b> and hit enter, all the dependencies will install in your laptop
+* Now you can start frontend by typing <b>npm start</b>
 
 
 
