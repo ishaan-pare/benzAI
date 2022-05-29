@@ -1,13 +1,13 @@
-# 📊 Data analytics in car dataset 
-## (MS Engage 2022 Final submission).
+# 📊 Data analytics in car dataset
+(MS Engage 2022 Final submission).
 
 <p align="center">
   <img
        width="max_content"
        height="max_content"
-       src="readmeassets/fullpageview.png"
-  >
-  Demonstration of how the Automotive Industry could harness data to take informed decisions.
+       src="readmeassets/entire.gif"
+  ><br/><br/>
+  <b><u><i>Demonstration of how the Automotive Industry could harness data to take informed decisions.</i></u></b><br/><br/>
 </p>
 
 
@@ -138,7 +138,7 @@ Three graph supported by visualizer are
   <img
        width="max_content"
        height="max_content"
-       src="readmeassets/heatmap.png"
+       src="readmeassets/Screenshot from 2022-05-28 00-06-57.png"
   >
 </p>
 Customer segmets let you visualize different segements of customer depending upon the price and sales of the car
