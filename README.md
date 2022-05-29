@@ -10,7 +10,20 @@
   <b><u><i>Demonstration of how the Automotive Industry could harness data to take informed decisions.</i></u></b><br/><br/>
 </p>
 
+## System requirements
 
+Before installation let see what you need 
+* Laptop or PC (this application is non responsive in mobiles)
+* nodejs version>=16
+
+## Installation
+
+* Open terminal or command prompt and do following step by step
+* Clone the repository by using following command
+* <b>git clone</b> url/to/this/repo
+* cd to the cloned repository named car_data_analysis_frontend or car_data_analysis_frontend_main
+* Type <b>npm install</b> and hit enter, all the dependencies will install in your laptop
+* Now you can start frontend by typing <b>npm start</b>
 
 ## Introduction
 <p>
@@ -26,20 +39,6 @@ This application is frontend for car data analysis project and technologies used
 * @syncfusion/ej2-react-heatmap
 * @mui/material
 
-## System requirements
-
-Before installation let see what you need 
-* Laptop or PC (this application is non responsive in mobiles)
-* nodejs version>=16
-
-## Installation
-
-* Open terminal or command prompt and do following step by step
-* Clone the repository by using following command
-* <b>git clone</b> url/to/this/repo
-* cd to the cloned repository named car_data_analysis_frontend or car_data_analysis_frontend_main
-* Type <b>npm install</b> and hit enter, all the dependencies will install in your laptop
-* Now you can start frontend by typing <b>npm start</b>
 
 
 
