@@ -138,7 +138,7 @@ Three graph supported by visualizer are
   <img
        width="max_content"
        height="max_content"
-       src="readmeassets/heatmap.png"
+       src="readmeassets/Screenshot from 2022-05-28 00-06-57.png"
   >
 </p>
 Customer segmets let you visualize different segements of customer depending upon the price and sales of the car
