@@ -1,4 +1,4 @@
-# 📊 Data analytics in car dataset
+# 📊 BenzAI (Data analytics in car dataset)
 (MS Engage 2022 Final submission).
 
 <p align="center">
